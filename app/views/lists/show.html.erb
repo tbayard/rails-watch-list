@@ -1,0 +1,17 @@
+<h1><%= @list.name %></h1>
+
+<ul class="list-group">
+  <% @list.bookmarks.each do |list| %>
+    <li class="list-group-item"><%= list.comment %></li>
+    <br>
+  <% end %>
+</ul>
+
+
+
+<ul class="list-group">
+  <% @bookmarks.each do |bookmark| %>
+    <li class="list-group-item"><%= bookmark.movie.title %><%= image_tag "#{bookmark.movie.poster_url}", width: 200 %></li>
+    <br>
+  <% end %>
+</ul>
